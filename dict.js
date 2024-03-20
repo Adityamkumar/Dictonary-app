@@ -41,10 +41,4 @@ inputval.addEventListener("keyup",()=>{
 
 
 
-// console.log(data.meanings[0].definitions[0].definition);
 
-
-// console.log(data.phonetics[1].audio);
-//         console.log(data.meanings[2].definitions[0].definition);
-//         console.log(data.meanings[2].definitions[1].definition);
-// console.log(data.meanings[0].partOfSpeech);
