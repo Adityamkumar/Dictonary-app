@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    position: relative;
+    background: linear-gradient(#617EE5,#E7B4C1);
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+h2{
+    text-align: center;
+    color: #fff;
+    font-size: 2.3rem;
+    font-weight: 800;
+}
+.container{
+    width:500px;
+    height:340px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgb(154, 153, 153);
+    text-overflow: clip;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+.container::-webkit-scrollbar{
+  display: none;
+}
+.flex-raw{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding: 20px 20px;
+}
+.flex-raw input{
+    padding: 8px;
+    font-size: 17px;
+    color: black;
+    width: 280px;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid rgba(112, 28, 239, 0.219);
+}
+input:focus{
+    border-bottom: 3px solid rgba(32, 50, 186, 0.219);   
+}
+input::placeholder{
+    color:black;
+    font-size: 16px;
+}
+
+.result{
+    padding: 1rem 1.5rem;
+}
+.result #word{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0px;
+    font-size: 30px;
+    font-weight: 600;
+}
+#word button{
+    border: none;
+    background-color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+#word button i{
+    color: rgb(104, 106, 230);
+}
+.result #type{
+    margin-top: 8px;
+    font-size: 16px;
+    color: gray;
+}
+.result #synonyms{
+    margin-top: 8px;
+    font-size: 17px;
+    width: 320px;
+}
+.result #mean{
+    font-size: 17px;
+    margin-top: 18px;
+    border-left: 3px solid rgb(37, 157, 255);
+    padding: 0px 8px;
+}
+
+@media only screen and (max-width:375px) {
+    .container{
+       width: 350px;
+    }
+    .flex-raw input{
+        width: 240px;
+    }
+    
+}
+
+@media only screen and (max-width:500px) {
+    .container{
+       width: 380px;
+    }
+    .flex-raw input{
+        width: 240px;
+    }
+    
+}
+
+@media only screen and (max-width:400px) {
+    .container{
+       width: 360px;
+    }
+    .flex-raw input{
+        width: 240px;
+    }
+    
+}
+@media only screen and (max-width:360px) {
+    .container{
+       width: 320px;
+    }
+    .flex-raw input{
+        width: 240px;
+    }
+    h2{
+        font-size:2rem;
+        font-weight: 800;
+    }
+    
+}
+@media only screen and (max-width:280px) {
+    .container{
+       width: 265px;
+    }
+    .flex-raw input{
+        width: 180px;
+    }
+    h2{
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+    
+}
