@@ -14,6 +14,25 @@ html,body{
     align-items: center;
     flex-direction: column;
     gap: 40px;
+    font-family: sans-serif;
+}
+
+
+@keyframes blink {
+  0%{
+    scale: 1.2;
+  }    
+  50%{
+    scale: 1.1;
+  }
+  100%{
+    scale: 1.2;
+  }
+}
+.pop-up h3{
+    text-align: center;
+    color:black;
+    font-size: 18px;
 }
 h2{
     text-align: center;
@@ -39,6 +58,7 @@ h2{
     align-items: center;
     justify-content:center;
     padding: 20px 20px;
+    gap: 8px;
 }
 .flex-raw input{
     padding: 8px;
@@ -48,6 +68,11 @@ h2{
     border: none;
     outline: none;
     border-bottom: 3px solid rgba(112, 28, 239, 0.219);
+}
+.flex-raw i{
+    font-size: 26px;
+    color: red;
+    cursor: pointer;
 }
 input:focus{
     border-bottom: 3px solid rgba(32, 50, 186, 0.219);   
@@ -94,6 +119,39 @@ input::placeholder{
     padding: 0px 8px;
 }
 
+.mic-box{
+    position: absolute;
+    left: 50%;
+    top: 58%;
+    transform: translate(-50%,-50%);
+   height: 230px;
+   width: 250px;
+   background-color:rgba(255, 255, 255, 0.988);
+   z-index:2;
+   box-shadow: 0px -2px 20px 4px rgb(0 0 0 / 22%);
+   border-radius: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   opacity: 0;
+   transition: all ease-in-out 0.4s;
+}
+.mic-box i{
+    position:relative;
+    left: 40%;
+    top:-6.8%;
+    font-size: 22px;
+    cursor: pointer;
+}
+.mic-box img{
+    height: 120px;
+    width: 120px;
+}
+.mic-box h3{
+    text-align: center;
+    font-size: 19px;
+}
 @media only screen and (max-width:375px) {
     .container{
        width: 350px;
@@ -147,5 +205,7 @@ input::placeholder{
         font-size: 1.8rem;
         font-weight: 700;
     }
-    
+    .mic-box{
+        width: 230px;
+    }
 }
